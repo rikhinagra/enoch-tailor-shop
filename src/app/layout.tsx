@@ -18,7 +18,11 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://enochtailor.shop"),
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://enochtailor.shop"
+  ),
   title: {
     default: "Enoch Tailor Shop — Expert Alterations & Tailoring in Arlington Heights, IL",
     template: "%s | Enoch Tailor Shop",
