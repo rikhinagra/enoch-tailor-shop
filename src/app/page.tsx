@@ -13,7 +13,7 @@ import FloatingCta from "@/components/FloatingCta";
 
 export default function Home() {
   return (
-    <>
+    <div style={{ overflowX: "hidden", width: "100%" }}>
       <Navbar />
       <main>
         <Hero />
@@ -28,6 +28,6 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingCta />
-    </>
+    </div>
   );
 }
