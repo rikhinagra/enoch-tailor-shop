@@ -123,7 +123,7 @@ export default function Location() {
           </div>
 
           {/* Right — Map */}
-          <div style={{ border: "1px solid #CCCCCC", overflow: "hidden", aspectRatio: "4/3", minHeight: "300px" }}>
+          <div style={{ border: "1px solid #CCCCCC", overflow: "hidden", aspectRatio: "4/3", minHeight: "300px", width: "100%", maxWidth: "100%" }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2963.4287853956076!2d-87.98897492349396!3d42.065267671218244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb9c0f1b1e9c3%3A0x6d5d8f2c2b1a4e0!2s813%20W%20Rand%20Rd%2C%20Arlington%20Heights%2C%20IL%2060004!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus"
               width="100%"
