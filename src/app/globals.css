@@ -1,26 +1,207 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jost), system-ui, sans-serif;
+  font-weight: 300;
+  color: #0d0d0d;
+  background: #f8f8f8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
+
+/* Subtle grain texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  opacity: 0.03;
+}
+
+/* ── Shared containers ── */
+.section-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.rd1 { transition-delay: 0.08s; }
+.rd2 { transition-delay: 0.16s; }
+.rd3 { transition-delay: 0.24s; }
+.rd4 { transition-delay: 0.32s; }
+.rd5 { transition-delay: 0.40s; }
+.rd6 { transition-delay: 0.48s; }
+
+/* ── Eyebrow label ── */
+.eyebrow {
+  font-family: var(--font-jost), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* ── Buttons ── */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-gold {
+  background: #C8102E;
+  color: #ffffff;
+  padding: 16px 32px;
+}
+.btn-gold:hover {
+  background: #E8213E;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200,16,46,0.3);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(253,250,245,0.3);
+  color: white;
+  padding: 16px 32px;
+  background: transparent;
+}
+.btn-ghost:hover {
+  border-color: #E8213E;
+  color: #E8213E;
+}
+
+.btn-gold-sm {
+  background: #C8102E;
+  color: white;
+  padding: 12px 22px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-gold-sm:hover {
+  background: #E8213E;
+  transform: translateY(-1px);
+}
+
+.btn-forest-sm {
+  background: #111111;
+  color: white;
+  padding: 12px 22px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-forest-sm:hover {
+  background: #222222;
+  transform: translateY(-1px);
+}
+
+/* ── Floating CTA buttons ── */
+.float-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.float-call {
+  background: #C8102E;
+  color: #fff;
+}
+.float-call:hover {
+  background: #E8213E;
+  transform: translateY(-2px);
+}
+.float-dir {
+  background: #111111;
+  color: #fff;
+}
+.float-dir:hover {
+  background: #222222;
+  transform: translateY(-2px);
+}
+
+/* Mobile — hide float labels, show icon only */
+@media (max-width: 480px) {
+  .float-btn {
+    padding: 13px 14px;
+    font-size: 0;
+    gap: 0;
+  }
+  .float-btn svg { width: 18px; height: 18px; }
+}
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes cpulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+/* ── Accessibility ── */
+:focus-visible {
+  outline: 2px solid #C8102E;
+  outline-offset: 3px;
+}
+
+/* ── Images ── */
+img { max-width: 100%; }

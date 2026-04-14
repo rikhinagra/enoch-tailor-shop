@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enoch Tailor Shop
+### ARLINGTON HEIGHTS, IL
+
+**Expert Alterations Since 1999**
+Website: [enochtailor.shop](https://enochtailor.shop)
+Phone: (847) 766-8554
+Address: 813 W Rand Rd, Suite A · Arlington Heights, IL 60004
+
+---
+
+## About
+
+Professional website for Enoch Tailor Shop — Arlington Heights' most trusted tailor since 1999. Expert alterations and tailoring for men and women including suits, wedding gowns, jeans, leather repair, and more.
+
+Designed & Built by [SACHHSOFT](https://www.sachhsoft.com/)
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, TypeScript)
+- **Styling:** Tailwind CSS + Inline Styles
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Fonts:** Cormorant Garamond + Jost (Google Fonts)
+- **Build Tool:** Turbopack
+
+---
+
+## Sections
+
+- Hero (Video Background)
+- Marquee Strip
+- Alterations (Men's & Women's)
+- Repairs & Specialty
+- Why Choose Us
+- Testimonials
+- How It Works (Process)
+- In-Store Shop
+- Location & Hours
+- Footer
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build for Production
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO & AEO
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Full metadata (title, description, keywords, OpenGraph, Twitter Card)
+- JSON-LD LocalBusiness schema
+- Semantic HTML with aria-labels
+- Branded OG image (1200x630)
+- PWA ready (manifest, icons, theme color)
