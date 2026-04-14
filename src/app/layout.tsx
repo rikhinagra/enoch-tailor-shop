@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       "Arlington Heights' most trusted tailor since 1999. Expert alterations for men and women. Suits, gowns, jeans, leather, and everything in between.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/images/elegant-couple-in-tailor-shop.png",
         width: 1200,
         height: 630,
         alt: "Enoch Tailor Shop — Expert Alterations & Tailoring in Arlington Heights, IL",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: "Enoch Tailor Shop — Expert Alterations in Arlington Heights, IL",
     description:
       "Arlington Heights' most trusted tailor since 1999. Expert alterations for men and women.",
-    images: ["/opengraph-image"],
+    images: ["/images/elegant-couple-in-tailor-shop.png"],
   },
   alternates: {
     canonical: "https://enochtailor.shop",
