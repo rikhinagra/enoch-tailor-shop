@@ -129,7 +129,7 @@ export default function Hero() {
                 <MapPin size={16} color="#C8102E" style={{ marginTop: "3px", flexShrink: 0 }} aria-hidden="true" />
                 <div>
                   <p className="eyebrow" style={{ color: "rgba(255,255,255,0.4)", marginBottom: "5px", fontSize: "11px" }}>Address</p>
-                  <p style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "17px", fontWeight: 500, color: "#fff", lineHeight: 1.5 }}>
+                  <p style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "15px", fontWeight: 400, color: "#fff", lineHeight: 1.6 }}>
                     813 W Rand Rd, Suite A<br />Arlington Heights, IL 60004
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function Hero() {
                 <Phone size={16} color="#C8102E" style={{ marginTop: "3px", flexShrink: 0 }} aria-hidden="true" />
                 <div>
                   <p className="eyebrow" style={{ color: "rgba(255,255,255,0.4)", marginBottom: "5px", fontSize: "11px" }}>Phone</p>
-                  <a href="tel:+18477668554" style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "18px", fontWeight: 500, color: "#fff", textDecoration: "none" }}>
+                  <a href="tel:+18477668554" style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "16px", fontWeight: 500, color: "#fff", textDecoration: "none" }}>
                     (847) 766-8554
                   </a>
                 </div>
@@ -149,7 +149,7 @@ export default function Hero() {
                 <Clock size={16} color="#C8102E" style={{ marginTop: "3px", flexShrink: 0 }} aria-hidden="true" />
                 <div>
                   <p className="eyebrow" style={{ color: "rgba(255,255,255,0.4)", marginBottom: "5px", fontSize: "11px" }}>Hours</p>
-                  <p style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "16px", fontWeight: 500, color: "#fff", lineHeight: 1.6 }}>
+                  <p style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "14px", fontWeight: 400, color: "#fff", lineHeight: 1.7 }}>
                     Mon–Fri: 10am – 6pm<br />Sat: 9am – 3pm · Closed Sun
                   </p>
                 </div>

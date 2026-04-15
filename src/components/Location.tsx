@@ -47,7 +47,7 @@ export default function Location() {
                 <MapPin size={14} color="#C8102E" strokeWidth={2} aria-hidden="true" />
                 <p className="eyebrow" style={{ color: "#C8102E", fontSize: "11px" }}>Address</p>
               </div>
-              <address style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "22px", fontWeight: 500, color: "#0D0D0D", fontStyle: "normal", lineHeight: 1.45 }}>
+              <address style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "16px", fontWeight: 400, color: "#0D0D0D", fontStyle: "normal", lineHeight: 1.6 }}>
                 813 W Rand Rd, Suite A<br />Arlington Heights, IL 60004
               </address>
             </div>
@@ -58,7 +58,7 @@ export default function Location() {
                 <Phone size={14} color="#C8102E" strokeWidth={2} aria-hidden="true" />
                 <p className="eyebrow" style={{ color: "#C8102E", fontSize: "11px" }}>Phone</p>
               </div>
-              <a href="tel:+18477668554" style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "28px", fontWeight: 500, color: "#0D0D0D", textDecoration: "none", transition: "color 0.3s", display: "block" }}
+              <a href="tel:+18477668554" style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "22px", fontWeight: 500, color: "#0D0D0D", textDecoration: "none", transition: "color 0.3s", display: "block" }}
                 onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#C8102E")}
                 onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#0D0D0D")}
                 aria-label="Call Enoch Tailor Shop"
