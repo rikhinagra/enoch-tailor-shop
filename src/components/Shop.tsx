@@ -43,8 +43,8 @@ export default function Shop() {
       <div className="section-container">
         {/* Header */}
         <div ref={headRef} style={{ textAlign: "center", marginBottom: "60px" }}>
-          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px" }}>In-Store Collection</p>
-          <h2 id="shop-heading" style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 500, color: "#fff", lineHeight: 1.1, marginBottom: "20px" }}>
+          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px", fontSize: "15px" }}>In-Store Collection</p>
+          <h2 id="shop-heading" style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(24px, 2.8vw, 38px)", fontWeight: 500, color: "#fff", lineHeight: 1.1, marginBottom: "20px" }}>
             Shop the Best.{" "}
             <em style={{ fontStyle: "italic", color: "#E8213E" }}>Dressed Right</em> from Day One.
           </h2>

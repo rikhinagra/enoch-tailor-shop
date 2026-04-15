@@ -60,10 +60,10 @@ export default function WhyUs() {
     >
       <div className="section-container">
         <div ref={headRef} style={{ textAlign: "center", marginBottom: "64px" }}>
-          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px" }}>Why Locals Choose Us</p>
+          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px", fontSize: "15px" }}>Why Locals Choose Us</p>
           <h2
             id="whyus-heading"
-            style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 500, color: "#fff", lineHeight: 1.1 }}
+            style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(24px, 2.8vw, 38px)", fontWeight: 500, color: "#fff", lineHeight: 1.1 }}
           >
             Arlington Heights&apos;{" "}
             <em style={{ fontStyle: "italic", color: "#E8213E" }}>Most Trusted</em> Tailor

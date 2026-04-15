@@ -51,10 +51,10 @@ export default function Repairs() {
     <section id="repairs" aria-labelledby="repairs-heading" className="repairs-section">
       <div className="section-container">
         <div ref={headRef} style={{ textAlign: "center", marginBottom: "60px" }}>
-          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px" }}>Repairs &amp; Specialty</p>
+          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px", fontSize: "15px" }}>Repairs &amp; Specialty</p>
           <h2
             id="repairs-heading"
-            style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 500, color: "#0D0D0D", lineHeight: 1.1, marginBottom: "20px" }}
+            style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(24px, 2.8vw, 38px)", fontWeight: 500, color: "#0D0D0D", lineHeight: 1.1, marginBottom: "20px" }}
           >
             We Fix It.{" "}
             <em style={{ fontStyle: "italic", color: "#C8102E" }}>We Save It.</em>

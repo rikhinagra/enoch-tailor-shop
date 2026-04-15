@@ -235,22 +235,21 @@ export default function Alterations() {
         }}
         className="alt-header"
       >
-        <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px" }}>
+        <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px", fontSize: "15px" }}>
           Expert Alterations
         </p>
         <h2
           id="alterations-heading"
           style={{
             fontFamily: "var(--font-cormorant), serif",
-            fontSize: "clamp(36px, 4vw, 56px)",
+            fontSize: "clamp(24px, 2.8vw, 38px)",
             fontWeight: 500,
             color: "#0D0D0D",
             lineHeight: 1.1,
             marginBottom: "20px",
           }}
         >
-          For Him &amp; For Her,{" "}
-          <em style={{ fontStyle: "italic", color: "#C8102E" }}>Side by Side</em>
+          For Him &amp; For Her
         </h2>
         <p
           style={{

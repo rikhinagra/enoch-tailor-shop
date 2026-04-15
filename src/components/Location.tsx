@@ -30,8 +30,8 @@ export default function Location() {
     <section id="location" aria-labelledby="location-heading" className="location-section">
       <div className="section-container">
         <div ref={headRef} style={{ textAlign: "center", marginBottom: "64px" }}>
-          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px" }}>Visit Us</p>
-          <h2 id="location-heading" style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 500, color: "#0D0D0D", lineHeight: 1.1 }}>
+          <p className="eyebrow" style={{ color: "#C8102E", marginBottom: "16px", fontSize: "15px" }}>Visit Us</p>
+          <h2 id="location-heading" style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(24px, 2.8vw, 38px)", fontWeight: 500, color: "#0D0D0D", lineHeight: 1.1 }}>
             Come Find Us in{" "}
             <em style={{ fontStyle: "italic", color: "#C8102E" }}>Arlington Heights</em>
           </h2>
