@@ -20,9 +20,9 @@ export default function Home() {
         <MarqueeStrip />
         <Alterations />
         <Repairs />
-        <WhyUs />
-        <Testimonials />
-        <Process />
+        {/* <WhyUs /> */}
+        {/* <Testimonials /> */}
+        {/* <Process /> */}
         <Shop />
         <Location />
       </main>
