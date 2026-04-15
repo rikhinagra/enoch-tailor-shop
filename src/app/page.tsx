@@ -19,11 +19,11 @@ export default function Home() {
         <Hero />
         <MarqueeStrip />
         <Alterations />
+        <Shop />
         <Repairs />
         {/* <WhyUs /> */}
         {/* <Testimonials /> */}
         {/* <Process /> */}
-        <Shop />
         <Location />
       </main>
       <Footer />

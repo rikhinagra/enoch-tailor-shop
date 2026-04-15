@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { Phone, MapPin } from "lucide-react";
 
 const mensCategories = [
   {
@@ -178,26 +177,6 @@ function AlterationColumn({
           <ServiceCategory key={cat.title} title={cat.title} services={cat.services} />
         ))}
 
-        <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          <a
-            href="tel:+18477668554"
-            className="btn-base btn-gold-sm"
-            aria-label={`Call to book ${gender === "men" ? "men's" : "women's"} alterations`}
-          >
-            <Phone size={13} strokeWidth={2.5} />
-            Call to Book
-          </a>
-          <a
-            href="https://maps.google.com/?q=813+W+Rand+Rd+Arlington+Heights+IL"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-base btn-forest-sm"
-            aria-label="Get directions to our shop"
-          >
-            <MapPin size={13} strokeWidth={2.5} />
-            Visit Us
-          </a>
-        </div>
       </div>
     </div>
   );
@@ -273,7 +252,8 @@ export default function Alterations() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           maxWidth: "1300px",
-          margin: "0 auto 0",
+          margin: "0 auto",
+          paddingBottom: "80px",
         }}
         className="alt-grid"
       >

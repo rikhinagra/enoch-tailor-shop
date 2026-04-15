@@ -2,15 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { Check } from "lucide-react";
-
-const suitFeatures = [
-  "Two-piece & three-piece styles",
-  "Slim, classic & modern cuts",
-  "Alterations included with purchase",
-  "Colors, patterns & all sizes in stock",
-  "Perfect for weddings, work & events",
-];
+const suitTags = ["Two-Piece", "Three-Piece", "Slim Fit", "Classic Cut", "All Sizes"];
 const shirtTags = ["Solid Colors", "Pinstripe", "Spread Collar", "French Cuff", "All Sizes"];
 const accessories = ["Ties & Bowties", "Pocket Squares", "Belts", "Cufflinks", "Suspenders"];
 
@@ -56,36 +48,35 @@ export default function Shop() {
         {/* Grid */}
         <div ref={gridRef} className="shop-grid">
 
-          {/* Featured — Suits */}
-          <div className="shop-card shop-card-featured">
-            <div style={{ position: "relative", height: "300px", overflow: "hidden" }}>
-              <Image src="/images/tailored-suits-hanging-on-modern-copper-rack.webp" alt="Premium men's suits starting at $289 — Enoch Tailor Shop Arlington Heights" fill style={{ objectFit: "cover", objectPosition: "center", filter: "brightness(0.8)" }} sizes="(max-width: 900px) 100vw, 40vw" />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.7) 100%)" }} />
-              <div style={{ position: "absolute", top: "16px", left: "16px", background: "#C8102E", padding: "5px 12px" }}>
-                <span className="eyebrow" style={{ color: "#fff", fontSize: "11px" }}>Featured</span>
-              </div>
+          {/* Suits */}
+          <div className="shop-card">
+            <div style={{ position: "relative", height: "200px", overflow: "hidden" }}>
+              <Image src="/images/tailored-suits-hanging-on-modern-copper-rack.webp" alt="Premium men's suits starting at $289 — Enoch Tailor Shop Arlington Heights" fill style={{ objectFit: "cover", objectPosition: "center", filter: "brightness(0.8)" }} sizes="(max-width: 900px) 100vw, 30vw" />
             </div>
-            <div style={{ padding: "28px 28px 32px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px", gap: "12px" }}>
-                <h3 style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "clamp(20px, 2vw, 26px)", fontWeight: 600, color: "#fff", lineHeight: 1.2 }}>
-                  Premium Men&apos;s Suits
-                </h3>
-                <div style={{ textAlign: "right", flexShrink: 0 }}>
-                  <p style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "28px", fontWeight: 600, color: "#C8102E", lineHeight: 1 }}>$289</p>
-                  <p style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "11px", color: "rgba(255,255,255,0.4)", letterSpacing: "0.08em" }}>Starting at</p>
-                </div>
-              </div>
-              <p style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(255,255,255,0.58)", lineHeight: 1.7, marginBottom: "18px" }}>
+            <div style={{ padding: "24px 24px 28px", flex: 1, display: "flex", flexDirection: "column" }}>
+              <h3 style={{ fontFamily: "var(--font-cormorant), serif", fontSize: "22px", fontWeight: 600, color: "#fff", marginBottom: "4px" }}>Premium Men&apos;s Suits</h3>
+              <p style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "12px", fontWeight: 500, color: "#C8102E", letterSpacing: "0.08em", marginBottom: "10px" }}>from $289</p>
+              <p style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(255,255,255,0.55)", lineHeight: 1.7, marginBottom: "16px" }}>
                 Hand-selected suits for every occasion: interviews, weddings, work. Each suit is fitted and altered in-store so it looks made for you.
               </p>
-              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "7px" }}>
-                {suitFeatures.map((f) => (
-                  <li key={f} style={{ display: "flex", alignItems: "center", gap: "8px", fontFamily: "var(--font-jost), sans-serif", fontSize: "12px", fontWeight: 300, color: "rgba(255,255,255,0.55)" }}>
-                    <Check size={12} color="#C8102E" strokeWidth={2.5} aria-hidden="true" />
-                    {f}
-                  </li>
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "20px" }}>
+                {[
+                  "Two-piece & three-piece styles",
+                  "Slim, classic & modern cuts",
+                  "Alterations included with purchase",
+                  "Perfect for weddings, work & events",
+                ].map((item) => (
+                  <div key={item} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#C8102E", flexShrink: 0 }} aria-hidden="true" />
+                    <span style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "12px", fontWeight: 300, color: "rgba(255,255,255,0.45)", lineHeight: 1.5 }}>
+                      {item}
+                    </span>
+                  </div>
                 ))}
-              </ul>
+              </div>
+              <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                {suitTags.map((t) => <Tag key={t} label={t} />)}
+              </div>
             </div>
           </div>
 
@@ -185,7 +176,7 @@ export default function Shop() {
         .shop-section { background: #0D0D0D; padding: 100px 60px; }
         .shop-grid {
           display: grid;
-          grid-template-columns: 1.3fr 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
           margin-bottom: 16px;
         }
@@ -198,7 +189,6 @@ export default function Shop() {
           flex-direction: column;
         }
         .shop-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); border-color: rgba(200,16,46,0.2); }
-        .shop-card-featured { background: linear-gradient(160deg, #1A1A1A 0%, #000 100%); }
         .shop-banner {
           background: #111111;
           border: 1px solid rgba(255,255,255,0.06);
@@ -214,12 +204,10 @@ export default function Shop() {
         @media (max-width: 1100px) {
           .shop-section { padding: 80px 40px; }
           .shop-grid { grid-template-columns: 1fr 1fr; }
-          .shop-card-featured { grid-column: 1 / -1; }
         }
         @media (max-width: 600px) {
           .shop-section { padding: 64px 20px; }
           .shop-grid { grid-template-columns: 1fr; }
-          .shop-card-featured { grid-column: auto; }
           .shop-banner { padding: 28px 20px; }
           .shop-banner-tags { display: none; }
         }
