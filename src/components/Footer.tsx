@@ -74,43 +74,29 @@ export default function Footer() {
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            {[
-              { Icon: Phone, href: "tel:+18477668554", label: "(847) 766-8554", ariaLabel: "Call Enoch Tailor Shop" },
-              { Icon: Mail, href: "mailto:info@enochtailor.shop", label: "info@enochtailor.shop", ariaLabel: "Email Enoch Tailor Shop" },
-            ].map(({ Icon, href, label, ariaLabel }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  fontFamily: "var(--font-jost), sans-serif",
-                  fontSize: "13px",
-                  fontWeight: 400,
-                  color: "rgba(253,250,245,0.62)",
-                  textDecoration: "none",
-                  transition: "color 0.3s",
-                }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#E8213E")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(253,250,245,0.62)")}
-                aria-label={ariaLabel}
-              >
-                <Icon size={13} strokeWidth={1.8} style={{ flexShrink: 0 }} aria-hidden="true" />
-                {label}
-              </a>
-            ))}
+            <a
+              href="tel:+18477668554"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                fontFamily: "var(--font-jost), sans-serif",
+                fontSize: "13px",
+                fontWeight: 400,
+                color: "rgba(253,250,245,0.62)",
+                textDecoration: "none",
+                transition: "color 0.3s",
+              }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#E8213E")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(253,250,245,0.62)")}
+              aria-label="Call Enoch Tailor Shop"
+            >
+              <Phone size={13} strokeWidth={1.8} style={{ flexShrink: 0 }} aria-hidden="true" />
+              (847) 766-8554
+            </a>
           </div>
         </div>
 
-        {/* Service columns */}
-        <div className="footer-services">
-          <FooterColumn title="Men's Services" items={mensServices} />
-          <FooterColumn title="Women's Services" items={womensServices} />
-          <FooterColumn title="In-Store Shop" items={shopItems} />
-        </div>
       </div>
 
       {/* ── Divider ── */}
@@ -123,7 +109,6 @@ export default function Footer() {
           <p className="footer-copy-text">
             © 2026 Enoch Tailor Shop · 813 W Rand Rd · Arlington Heights, IL 60004
           </p>
-          <p className="footer-copy-text footer-domain">enochtailor.shop</p>
         </div>
         {/* Row 2: credit — centered, always fully visible */}
         <div className="footer-credit-row">

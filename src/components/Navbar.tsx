@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Alterations", href: "#alterations" },
   { label: "Repairs", href: "#repairs" },
   { label: "In-Store Shop", href: "#shop" },
-  { label: "Reviews", href: "#testimonials" },
   { label: "Find Us", href: "#location" },
 ];
 

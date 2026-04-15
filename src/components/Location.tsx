@@ -67,20 +67,6 @@ export default function Location() {
               </a>
             </div>
 
-            {/* Email */}
-            <div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
-                <Mail size={14} color="#C8102E" strokeWidth={2} aria-hidden="true" />
-                <p className="eyebrow" style={{ color: "#C8102E", fontSize: "11px" }}>Email</p>
-              </div>
-              <a href="mailto:info@enochtailor.shop" style={{ fontFamily: "var(--font-jost), sans-serif", fontSize: "15px", fontWeight: 400, color: "#0D0D0D", textDecoration: "none", transition: "color 0.3s" }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#C8102E")}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#0D0D0D")}
-              >
-                info@enochtailor.shop
-              </a>
-            </div>
-
             {/* Hours */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "14px" }}>
@@ -109,17 +95,6 @@ export default function Location() {
               </div>
             </div>
 
-            {/* CTAs */}
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="tel:+18477668554" className="btn-base btn-gold" aria-label="Call Enoch Tailor Shop">
-                <Phone size={14} strokeWidth={2.5} />
-                Call Now
-              </a>
-              <a href="https://maps.google.com/?q=813+W+Rand+Rd+Suite+A+Arlington+Heights+IL+60004" target="_blank" rel="noopener noreferrer" className="btn-base btn-forest-sm" style={{ padding: "16px 28px" }} aria-label="Get directions to Enoch Tailor Shop">
-                <MapPin size={14} strokeWidth={2.5} />
-                Get Directions
-              </a>
-            </div>
           </div>
 
           {/* Right — Map */}
